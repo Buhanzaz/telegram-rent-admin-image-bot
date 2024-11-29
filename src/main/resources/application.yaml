@@ -3,8 +3,8 @@ spring:
     name: telegram-rent-admin-image-bot
 
 telegram:
-  webhookUrl: YOU_WEBHOOK_URL
-  botPath: YOU_BOT_PATH
+  webhookUrl: https://f096-185-123-165-192.ngrok-free.app/webhook
+  botPath: /webhook
 
 server:
   port: 8081

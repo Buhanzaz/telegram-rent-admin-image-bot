@@ -9,7 +9,8 @@ import org.telegram.telegrambots.webhook.starter.SpringTelegramWebhookBot;
 @Slf4j
 @Component
 public class MyBot extends SpringTelegramWebhookBot {
-    public MyBot(@Value("${telegram.botPath}") String botPath, @Value("${telegram.webhookUrl}") String webhookUrl) {
+    public MyBot(@Value("${telegram.botPath}") String botPath,
+                 @Value("${telegram.webhookUrl}") String webhookUrl) {
         super(botPath,
                 update -> {
                     log.debug("Sending update {}", update.getMessage().getText());
@@ -19,8 +20,8 @@ public class MyBot extends SpringTelegramWebhookBot {
                     SetWebhook webhook = SetWebhook.builder()
                             .url(webhookUrl)
                             .build();
-                    log.debug("Sending webhook {}", webhook.getUrl());
+                    log.debug("Set webhook {}", webhook.getUrl());
                 },
-                () -> log.debug("delete webhook"));
+                () -> log.debug("Delete webhook"));
     }
 }

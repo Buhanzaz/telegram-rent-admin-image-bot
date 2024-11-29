@@ -24,11 +24,10 @@ repositories {
 }
 
 dependencies {
-    implementation ("org.telegram:telegrambots-springboot-webhook-starter:7.10.0")
-    implementation ("org.telegram:telegrambots-client:7.10.0")
+    implementation ("org.telegram:telegrambots-springboot-webhook-starter:7.11.0")
+    implementation ("org.telegram:telegrambots-client:7.11.0")
     implementation("org.jetbrains:annotations:24.0.1")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-web")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     annotationProcessor("org.projectlombok:lombok")
